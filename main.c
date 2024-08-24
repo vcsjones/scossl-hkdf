@@ -13,7 +13,7 @@ void dump(unsigned char* data, int length) {
     printf("%s", "\n");
 }
 
-static int ExerciseHkdf(const char* algorithm) {
+static int ExerciseHkdf(char* algorithm) {
     printf("Attempting HKDF with '%s'\n", algorithm);
 
     EVP_KDF* kdf = EVP_KDF_fetch(NULL, "HKDF", NULL);
@@ -54,6 +54,7 @@ static int ExerciseHkdf(const char* algorithm) {
     printf("Result: ");
     dump(dk, 16);
     printf("\n");
+    return 0;
 }
 
 int main() {
