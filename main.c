@@ -60,4 +60,5 @@ int main() {
     ExerciseHkdf("SHA256");
     ExerciseHkdf("BLAH384");
     ExerciseHkdf("SHA3-256");
+    return 0;
 }
